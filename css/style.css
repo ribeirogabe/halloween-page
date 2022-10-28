@@ -17,6 +17,18 @@
     box-sizing: border-box;
 }
 
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #17030e;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: #fdab5a;
+    border-radius: 10px;
+}
+
 a{
     text-decoration: none;
 }
@@ -100,10 +112,48 @@ header{
 
 
 
+
+
+.bats-decoration{
+    position: absolute;
+    width: 270px;
+    top: 90px;
+    left: 40px;
+    animation: flyBat 1s infinite alternate-reverse linear;
+}
+
+@keyframes flyBat{
+    from{
+        transform: translateY(10px);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+.cobweb-decoration{
+    position: absolute;
+    top: 100px;
+    left: 1156px;
+    width: 200px;
+}
+
+.witch-decoration{
+    position: absolute;
+    width: 300px;
+    top: 330px;
+    left: 900px;
+    display: flex;
+    animation: flyBat 2s infinite alternate-reverse linear;
+}
+
+
+
 /* home */
 
 .section-home{
-    background-image: url(../assets/imgs/background-home-1-orange.png);
+    background-image: url(../assets/imgs/home/background-home-1-orange.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -243,7 +293,7 @@ header{
 
 
 .section-games{
-    background-image: url(../assets/imgs/background-home-2-orange.png);
+    background-image: url(../assets/imgs/home/background-home-2-orange.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
@@ -357,5 +407,98 @@ footer h1 a{
 
 footer h1 a:hover{
     border-bottom: 1px solid aliceblue;
+    transition: 300ms;
+}
+
+
+
+
+
+
+
+
+/* login section */
+.login-screen{
+    position: fixed;
+    background-color: rgba(183, 83, 7, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.form-content .pumpkin{
+    position: absolute;
+    width: 80px;
+    top: 500px;
+    left: 450px;
+    transform: rotate(330deg);
+    filter: drop-shadow(1px 1px 3px #f2caa3);
+}
+
+.close-login-screen{
+    position: absolute;
+    width: 40px;
+    top: 110px;
+    left: 860px;
+    cursor: pointer;
+
+}
+
+.form-content form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.form-input{
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #17030e;
+}
+
+.form-content form button{
+    width: 110px;
+    height: 40px;
+    border: 3px solid #17030e;
+    background-color: #fdab5a;
+    color: #17030e;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+}
+
+.form-content form button:hover{
+    color: #fdab5a;
+    border: 3px solid #fdab5a;
+    background-color: #17030e;
+    transition: 300ms;
+}
+
+.form-content form a{
+    color: #17030e;
+    text-decoration: underline;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.form-content form a:hover{
+    transform: scale(1.1);
     transition: 300ms;
 }
